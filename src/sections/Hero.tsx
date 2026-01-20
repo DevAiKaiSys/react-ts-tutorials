@@ -1,11 +1,12 @@
-import {words} from "../constants";
+import { words } from "../constants";
 import Button from "../components/Button.tsx";
+import HeroExperience from "../components/HeroModels/HeroExperience.tsx";
 
 const Hero = () => {
     return (
         <section id="hero" className="relative overflow-hidden">
             <div className="absolute top-0 left-0 z-10">
-                <img src="/images/bg.png" alt="background"/>
+                <img src="/images/bg.png" alt="background" />
             </div>
 
             <div className="hero-layout">
@@ -19,8 +20,8 @@ const Hero = () => {
                                     <span className="wrapper">
                                         {words.map((word) => (
                                             <span key={word.text} className="flex items-center md:gap-3 gap-1 pb-2">
-                                            <img src={word.imgPath} alt={word.text}
-                                                 className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"/>
+                                                <img src={word.imgPath} alt={word.text}
+                                                    className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50" />
 
                                                 <span>{word.text}</span>
                                             </span>
@@ -34,11 +35,18 @@ const Hero = () => {
                         <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
                             Hi, I'm Adrian, a developer based in Croatia with a passion for code.
                         </p>
-                        <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See my work"/>
+                        <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See my work" />
                     </div>
                 </header>
+
+                {/*RIGHT: 3D MODEL*/}
+                <figure>
+                    <div className="hero-3d-layout">
+                        <HeroExperience />
+                    </div>
+                </figure>
             </div>
         </section>
-    )
+    );
 }
 export default Hero
