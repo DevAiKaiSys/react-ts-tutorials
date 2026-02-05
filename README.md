@@ -46,3 +46,8 @@ npx gltfjsx optimized-room.glb
 - **postprocessing**
   - **Description**: The underlying library that implements the post-processing effects.
   - **Documentation**: [https://github.com/pmndrs/postprocessing](https://github.com/pmndrs/postprocessing)
+
+
+[useGSAP() Hook](https://gsap.com/resources/React/)
+
+[React CountUp](https://www.npmjs.com/package/react-countup)
