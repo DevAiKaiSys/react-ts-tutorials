@@ -1,13 +1,9 @@
-import { useRef } from "react";
 import type { MouseEvent, ReactNode } from "react";
+import { useRef } from "react";
 
 interface Card {
     review: string;
     imgPath: string;
-    logoPath: string;
-    title: string;
-    date: string;
-    responsibilities: string[];
 }
 
 interface GlowCardProps {
