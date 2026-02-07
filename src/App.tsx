@@ -1,7 +1,8 @@
-import LogoSection from "./sections/LogoSection.tsx";
 import NavBar from "./components/NavBar.tsx";
+import ExperienceSection from "./sections/ExperienceSection.tsx";
 import FeatureCards from "./sections/FeatureCards.tsx";
 import Hero from "./sections/Hero.tsx";
+import LogoSection from "./sections/LogoSection.tsx";
 import ShowcaseSection from "./sections/ShowcaseSection.tsx";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
             <ShowcaseSection />
             <LogoSection />
             <FeatureCards />
+            <ExperienceSection />
         </>
     )
 }
