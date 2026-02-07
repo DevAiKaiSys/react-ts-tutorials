@@ -1,4 +1,5 @@
 import NavBar from "./components/NavBar.tsx";
+import Contact from "./sections/Contact.tsx";
 import ExperienceSection from "./sections/ExperienceSection.tsx";
 import FeatureCards from "./sections/FeatureCards.tsx";
 import Hero from "./sections/Hero.tsx";
@@ -18,6 +19,7 @@ const App = () => {
             <ExperienceSection />
             <TechStack />
             <Testimonials />
+            <Contact />
         </>
     )
 }
