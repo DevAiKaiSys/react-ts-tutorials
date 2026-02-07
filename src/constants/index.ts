@@ -18,21 +18,21 @@ const navLinks = [
 ];
 
 const words = [
-    {text: "Ideas", imgPath: "/images/ideas.svg"},
-    {text: "Concepts", imgPath: "/images/concepts.svg"},
-    {text: "Designs", imgPath: "/images/designs.svg"},
-    {text: "Code", imgPath: "/images/code.svg"},
-    {text: "Ideas", imgPath: "/images/ideas.svg"},
-    {text: "Concepts", imgPath: "/images/concepts.svg"},
-    {text: "Designs", imgPath: "/images/designs.svg"},
-    {text: "Code", imgPath: "/images/code.svg"},
+    { text: "Ideas", imgPath: "/images/ideas.svg" },
+    { text: "Concepts", imgPath: "/images/concepts.svg" },
+    { text: "Designs", imgPath: "/images/designs.svg" },
+    { text: "Code", imgPath: "/images/code.svg" },
+    { text: "Ideas", imgPath: "/images/ideas.svg" },
+    { text: "Concepts", imgPath: "/images/concepts.svg" },
+    { text: "Designs", imgPath: "/images/designs.svg" },
+    { text: "Code", imgPath: "/images/code.svg" },
 ];
 
 const counterItems = [
-    {value: 15, suffix: "+", label: "Years of Experience"},
-    {value: 200, suffix: "+", label: "Satisfied Clients"},
-    {value: 108, suffix: "+", label: "Completed Projects"},
-    {value: 90, suffix: "%", label: "Client Retention Rate"},
+    { value: 15, suffix: "+", label: "Years of Experience" },
+    { value: 200, suffix: "+", label: "Satisfied Clients" },
+    { value: 108, suffix: "+", label: "Completed Projects" },
+    { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
 const logoIconsList = [
@@ -112,38 +112,43 @@ const techStackImgs = [
     },
 ];
 
-const techStackIcons = [
-    {
-        name: "React Developer",
-        modelPath: "/models/react_logo-transformed.glb",
-        scale: 1,
-        rotation: [0, 0, 0],
-    },
-    {
-        name: "Python Developer",
-        modelPath: "/models/python-transformed.glb",
-        scale: 0.8,
-        rotation: [0, 0, 0],
-    },
-    {
-        name: "Backend Developer",
-        modelPath: "/models/node-transformed.glb",
-        scale: 5,
-        rotation: [0, -Math.PI / 2, 0],
-    },
-    {
-        name: "Interactive Developer",
-        modelPath: "/models/three.js-transformed.glb",
-        scale: 0.05,
-        rotation: [0, 0, 0],
-    },
-    {
-        name: "Project Manager",
-        modelPath: "/models/git-svg-transformed.glb",
-        scale: 0.05,
-        rotation: [0, -Math.PI / 4, 0],
-    },
-];
+const techStackIcons: {
+    name: string;
+    modelPath: string;
+    scale: number;
+    rotation: [number, number, number];
+}[] = [
+        {
+            name: "React Developer",
+            modelPath: "/models/react_logo-transformed.glb",
+            scale: 1,
+            rotation: [0, 0, 0],
+        },
+        {
+            name: "Python Developer",
+            modelPath: "/models/python-transformed.glb",
+            scale: 0.8,
+            rotation: [0, 0, 0],
+        },
+        {
+            name: "Backend Developer",
+            modelPath: "/models/node-transformed.glb",
+            scale: 5,
+            rotation: [0, -Math.PI / 2, 0],
+        },
+        {
+            name: "Interactive Developer",
+            modelPath: "/models/three.js-transformed.glb",
+            scale: 0.05,
+            rotation: [0, 0, 0],
+        },
+        {
+            name: "Project Manager",
+            modelPath: "/models/git-svg-transformed.glb",
+            scale: 0.05,
+            rotation: [0, -Math.PI / 4, 0],
+        },
+    ];
 
 const expCards = [
     {
@@ -271,15 +276,9 @@ const socialImgs = [
 ];
 
 export {
-    words,
-    abilities,
-    logoIconsList,
-    counterItems,
+    abilities, counterItems,
     expCards,
-    expLogos,
-    testimonials,
-    socialImgs,
+    expLogos, logoIconsList, navLinks, socialImgs,
     techStackIcons,
-    techStackImgs,
-    navLinks,
+    techStackImgs, testimonials, words
 };
