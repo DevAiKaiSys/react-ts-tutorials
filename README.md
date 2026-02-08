@@ -51,3 +51,5 @@ npx gltfjsx optimized-room.glb
 [useGSAP() Hook](https://gsap.com/resources/React/)
 
 [React CountUp](https://www.npmjs.com/package/react-countup)
+
+[EmailJS](https://www.emailjs.com/docs/sdk/installation/)

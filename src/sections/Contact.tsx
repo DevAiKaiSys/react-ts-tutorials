@@ -1,9 +1,11 @@
+import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import ContactExperience from "../components/ContactExperience";
 import TitleHeader from "../components/TitleHeader";
 
 const Contact = () => {
-    const formRef = useRef(null);
+    const formRef = useRef<HTMLFormElement>(null);
+    const [loading, setLoading] = useState(false);
     const [form, setForm] = useState({
         name: "",
         email: "",
@@ -17,10 +19,24 @@ const Contact = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Handle form submission login here
-        console.log('Form submitted:', form);
-        // Reset form and stop loading
-        setForm({ name: "", email: "", message: "" });
+        if (!formRef.current) return;
+        setLoading(true); // Show loading state
+
+        try {
+            await emailjs.sendForm(
+                import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+                formRef.current,
+                import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+            );
+
+            // Reset form and stop loading
+            setForm({ name: "", email: "", message: "" });
+        } catch (error) {
+            console.error("EmailJS Error:", error); // Optional: show toast
+        } finally {
+            setLoading(false); // Always stop loading, even on error
+        }
     };
 
     return (
@@ -81,7 +97,7 @@ const Contact = () => {
                                     <div className="cta-button group">
                                         <div className="bg-circle" />
                                         <p className="text">
-                                            Send Message
+                                            {loading ? "Sending..." : "Send Message"}
                                         </p>
                                         <div className="arrow-wrapper">
                                             <img src="/images/arrow-down.svg" alt="arrow" />
