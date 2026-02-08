@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar.tsx";
 import Contact from "./sections/Contact.tsx";
 import ExperienceSection from "./sections/ExperienceSection.tsx";
 import FeatureCards from "./sections/FeatureCards.tsx";
+import Footer from "./sections/Footer.tsx";
 import Hero from "./sections/Hero.tsx";
 import LogoSection from "./sections/LogoSection.tsx";
 import ShowcaseSection from "./sections/ShowcaseSection.tsx";
@@ -20,6 +21,7 @@ const App = () => {
             <TechStack />
             <Testimonials />
             <Contact />
+            <Footer />
         </>
     )
 }
